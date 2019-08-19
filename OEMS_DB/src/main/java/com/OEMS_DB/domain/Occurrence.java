@@ -1,15 +1,18 @@
 package com.OEMS_DB.domain;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-public class Occurrence {
+@Entity
+public class Occurrence 
+{
 
 	private int ID;
 	private String caseNum;
 	private String openDate;
-	private String agName;
+	private String agencyID;
 	private String occDate;
 	private String reportedDate;
 	private String staffTakingReport;
@@ -55,14 +58,14 @@ public class Occurrence {
 		this.openDate = openDate;
 	}
 	
-	public String getAgName() 
+	public String getAgencyID() 
 	{
-		return agName;
+		return agencyID;
 	}
 	
-	public void setAgName(String agName) 
+	public void setAgencyID(String agencyID) 
 	{
-		this.agName = agName;
+		this.agencyID = agencyID;
 	}
 	
 	public String getOccDate() 

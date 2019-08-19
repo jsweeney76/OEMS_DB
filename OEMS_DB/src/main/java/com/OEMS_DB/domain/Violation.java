@@ -1,9 +1,11 @@
 package com.OEMS_DB.domain;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Entity
 public class Violation {
 
 	private int ID;
@@ -40,6 +42,8 @@ public class Violation {
 	private boolean other;
 	private String specOther;
 	private boolean warning;
+	private String entryBy;
+	private String entryDate;
 	
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	public int getID() 
@@ -380,5 +384,25 @@ public class Violation {
 	public void setWarning(boolean warning) 
 	{
 		this.warning = warning;
+	}
+
+	public String getEntryBy() 
+	{
+		return entryBy;
+	}
+
+	public void setEntryBy(String entryBy) 
+	{
+		this.entryBy = entryBy;
+	}
+
+	public String getEntryDate() 
+	{
+		return entryDate;
+	}
+
+	public void setEntryDate(String entryDate) 
+	{
+		this.entryDate = entryDate;
 	}
 }

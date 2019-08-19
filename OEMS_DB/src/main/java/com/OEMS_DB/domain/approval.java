@@ -1,9 +1,11 @@
 package com.OEMS_DB.domain;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Entity
 public class approval {
 
 	private int ID;
@@ -19,6 +21,9 @@ public class approval {
 	private String director;
 	private String directorRec;
 	private String directorApp;
+	private int caseID;
+	private String entryBy;
+	private String entryDate;
 	
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	public int getID() 
@@ -149,5 +154,35 @@ public class approval {
 	public void setDirectorApp(String directorApp) 
 	{
 		this.directorApp = directorApp;
+	}
+
+	public int getCaseID() 
+	{
+		return caseID;
+	}
+
+	public void setCaseID(int caseID) 
+	{
+		this.caseID = caseID;
+	}
+
+	public String getEntryBy() 
+	{
+		return entryBy;
+	}
+
+	public void setEntryBy(String entryBy) 
+	{
+		this.entryBy = entryBy;
+	}
+
+	public String getEntryDate() 
+	{
+		return entryDate;
+	}
+
+	public void setEntryDate(String entryDate) 
+	{
+		this.entryDate = entryDate;
 	}
 }

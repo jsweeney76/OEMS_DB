@@ -1,15 +1,17 @@
 package com.OEMS_DB.domain;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Entity
 public class SpotCheck {
 
 	private int ID;
 	private String openDate;
 	private String caseNumber;
-	private String agencyID;
+	private int agencyID;
 	private String inspectionDate;
 	private String inspectedBy;
 	private String inspectedBy2;
@@ -25,7 +27,7 @@ public class SpotCheck {
 	private boolean photosTaken;
 	private String status;
 	private String oldID;
-	private String violationID;
+	private int violationID;
 	private String entryBy;
 	private String entryDate;
 	
@@ -60,12 +62,12 @@ public class SpotCheck {
 		this.caseNumber = caseNumber;
 	}
 	
-	public String getAgencyID() 
+	public int getAgencyID() 
 	{
 		return agencyID;
 	}
 	
-	public void setAgencyID(String agencyID) 
+	public void setAgencyID(int agencyID) 
 	{
 		this.agencyID = agencyID;
 	}
@@ -220,12 +222,12 @@ public class SpotCheck {
 		this.oldID = oldID;
 	}
 	
-	public String getViolationID() 
+	public int getViolationID() 
 	{
 		return violationID;
 	}
 	
-	public void setViolationID(String violationID) 
+	public void setViolationID(int violationID) 
 	{
 		this.violationID = violationID;
 	}

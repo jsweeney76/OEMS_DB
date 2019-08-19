@@ -1,10 +1,13 @@
 package com.OEMS_DB.domain;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-public class EduAud {
+@Entity
+public class EduAud 
+{
 
 	private int ID;
 	private String openDate;
@@ -25,6 +28,10 @@ public class EduAud {
 	private int numAides;
 	private String ratio;
 	private String comments;
+	private String eduProgVioID;
+	private String entryBy;
+	private String entryDate;
+	
 	
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	public int getID() 
@@ -215,5 +222,35 @@ public class EduAud {
 	public void setComments(String comments) 
 	{
 		this.comments = comments;
+	}
+
+	public String getEduProgVioID() 
+	{
+		return eduProgVioID;
+	}
+
+	public void setEduProgVioID(String eduProgVioID) 
+	{
+		this.eduProgVioID = eduProgVioID;
+	}
+
+	public String getEntryBy() 
+	{
+		return entryBy;
+	}
+
+	public void setEntryBy(String entryBy) 
+	{
+		this.entryBy = entryBy;
+	}
+
+	public String getEntryDate() 
+	{
+		return entryDate;
+	}
+
+	public void setEntryDate(String entryDate) 
+	{
+		this.entryDate = entryDate;
 	}
 }
